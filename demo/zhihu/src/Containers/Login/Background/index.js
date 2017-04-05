@@ -4,7 +4,7 @@ import Particle from '../../../../../../index';
 
 export default class Background extends React.Component {
     componentDidMount() {
-        new Particle(this.background);
+        new Particle(this.background, {interactive: true});
     }
 
     render() {

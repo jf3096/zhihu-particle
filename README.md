@@ -47,10 +47,10 @@ yarn add zhihu-particle #使用yarn安装
 
 context属性 | 类型 | 例子 | 说明
 ---------- | ---- | ----- | ------------------
-`atomColor` | `string` | `#eeeeee` | 原子颜色，默认值为#e4e5e6`
+`atomColor` | `string` | `#eeeeee` | 原子颜色，默认值为`#E4E5E6`
 `interactive` | `boolean` | true | 是否允许鼠标点击交互，默认值为true
-`density` | `number`或`string` | ‘medium’ | 密度，取值范围为1000~50000, ‘low’, ‘high’, ‘medium’。<br />这里可以理解成atoms数量=canvas宽*canvas高/密度。<br />这样的设计是为了在全站响应式的情况下，小屏幕会生成相应少的原子，大屏幕则会生成较多的原子，所以更符合日常需求。
-`velocity` | `number`或`string` | .8 | 原子移动速度，取值范围为0~1，`fast`，`slow`，`none`，`medium，默认为`medium``
+`density` | `number`或`string` | `medium` | 密度，取值范围为1000~50000, `low`, `high`, `medium`。<br />这里可以理解成atoms数量=canvas宽*canvas高/密度。<br />这样的设计是为了在全站响应式的情况下，小屏幕会生成相应少的原子，大屏幕则会生成较多的原子，所以更符合日常需求。
+`velocity` | `number`或`string` | .8 | 原子移动速度，取值范围为0~1，`fast`，`slow`，`none`，`medium`，默认为`medium`
 
 ## 效果图
 ![zhihu-particle](./git-img/zhihu-particle.gif)
