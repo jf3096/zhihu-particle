@@ -4,13 +4,13 @@ var invariant = require("invariant");
 var ParticleOption = (function () {
     function ParticleOption(_a) {
         var atomColor = _a.atomColor, interactive = _a.interactive, velocity = _a.velocity, density = _a.density;
-        this.atomColor = atomColor || '#E9EBEC';
+        this.atomColor = atomColor || '#E4E5E6';
         this.interactive = interactive !== undefined && interactive;
         this.velocity = ParticleOption.setVelocity(velocity);
         this.density = ParticleOption.setDensity(density);
     }
     ParticleOption.setVelocity = function (velocity) {
-        if (typeof velocity === "string") {
+        if (typeof velocity === "string" || velocity === undefined) {
             switch (velocity) {
                 case "fast":
                     return 1;
@@ -35,7 +35,7 @@ var ParticleOption = (function () {
         }
     };
     ParticleOption.setDensity = function (density) {
-        if (typeof density === "string") {
+        if (typeof density === "string" || density === undefined) {
             switch (density) {
                 case "high":
                     return 10000;

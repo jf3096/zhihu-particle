@@ -12,12 +12,7 @@ export default class Particle {
     private option: IParticleProps;
     private atoms: Array<Atom>;
 
-    public constructor(canvasWrapper: HTMLCanvasElement, option = {
-        atomColor: '#e4e5e6',
-        interactive: true,
-        density: 'low',
-        velocity: 'medium'
-    } as ParticleOption) {
+    public constructor(canvasWrapper: HTMLCanvasElement, option = {} as ParticleOption) {
         this.canvasWrapper = canvasWrapper;
         this.setHtmlElementSize(this.canvasWrapper);
         this.option = new ParticleOption(option);

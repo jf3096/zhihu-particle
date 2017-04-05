@@ -1,5 +1,5 @@
 # Zhihu-Particle (React Demo)
-[![NPM](https://nodei.co/npm/partical.png)](https://www.npmjs.com/package/partical)
+[![NPM](https://nodei.co/npm/zhihu-partical.png)](https://www.npmjs.com/package/zhihu-partical)
 
 ## 安装
 由于这是一个Demo项目， 所以暂且直接以来上层Zhihu-Particle， 所以首先需要下载zhihu-particle的github包或：

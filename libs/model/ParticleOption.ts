@@ -18,14 +18,14 @@ export default class ParticleOption {
         velocity,
         density,
     }: ParticleOption) {
-        this.atomColor = atomColor || '#E9EBEC';
+        this.atomColor = atomColor || '#E4E5E6';
         this.interactive = interactive !== undefined && interactive;
         this.velocity = ParticleOption.setVelocity(velocity);
         this.density = ParticleOption.setDensity(density);
     }
 
     private static setVelocity(velocity: VelocityType): number {
-        if (typeof velocity === `string`) {
+        if (typeof velocity === `string` || velocity === undefined) {
             switch (velocity) {
                 case `fast`:
                     return 1;
@@ -51,7 +51,7 @@ export default class ParticleOption {
     }
 
     public static setDensity(density: DensityType) {
-        if (typeof density === `string`) {
+        if (typeof density === `string` || density === undefined) {
             switch (density) {
                 case `high`:
                     return 10000;

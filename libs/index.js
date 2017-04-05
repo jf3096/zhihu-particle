@@ -6,12 +6,7 @@ var Atom_1 = require("./model/Atom");
 var debounce = require("lodash/debounce");
 var Particle = (function () {
     function Particle(canvasWrapper, option) {
-        if (option === void 0) { option = {
-            atomColor: '#e4e5e6',
-            interactive: true,
-            density: 'low',
-            velocity: 'medium'
-        }; }
+        if (option === void 0) { option = {}; }
         var _this = this;
         this.getContext = (function () {
             var context = null;
