@@ -5,7 +5,10 @@
 由于群友的号召，清明时节得空，所以仿[知乎登录](https://www.zhihu.com)页面，基于canvas实现了一个粒子（Particle）随机运动的动画效果。
 
 ## Demo
-[知乎React Demo](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu)
+[知乎React Demo](https://jf3096.github.io/zhihu-particle/)
+
+## Demo源码
+[知乎React Demo源码](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu)
 
 ## 安装
 ```shell
