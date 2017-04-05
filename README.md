@@ -4,6 +4,9 @@
 ## 简介
 由于群友的号召，清明时节得空，所以仿知乎登录页面，基于canvas实现了一个粒子（Particle）随机运动的动画效果。
 
+## Demo
+[知乎React Demo](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu)
+
 ## 安装
 ```shell
 npm i zhihu-particle --save #使用npm安装
@@ -34,7 +37,7 @@ context属性 | 类型 | 例子 | 说明
 `velocity` | `number` | .8 | 加速度
 
 ## 效果图
-![proxy](./git-img/zhihu-particle.gif)
+![zhihu-particle](./git-img/zhihu-particle.gif)
 
 ## 兼容性
 > IE9+
