@@ -1,0 +1,70 @@
+<template>
+    <div class="main">
+        <header>
+            <h1 class="logo">
+                知乎
+            </h1>
+            <h2 class="slogan">
+                与世界分享你的知识、经验和见解
+            </h2>
+        </header>
+        <section>
+            <slot></slot>
+        </section>
+        <footer>
+            <button class="downloadApp">
+                下载知乎 App
+            </button>
+        </footer>
+    </div>
+</template>
+<style scoped>
+    .main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        height: 480px;
+        margin: auto;
+    }
+
+    .logo {
+        font-size: 0;
+        margin: 0 auto;
+        width: 160px;
+        height: 74px;
+        background: url(../Layout/images/logo.png) no-repeat;
+        background-size: contain;
+    }
+
+    .slogan {
+        margin: 30px 0 20px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .downloadApp {
+        margin-top: 18px;
+        display: block;
+        padding: 0;
+        width: 100%;
+        height: 41px;
+        line-height: 39px;
+        color: #5fa6e5;
+        background: 0 0;
+        border: 1px solid #96c2e9;
+        border-radius: 3px;
+        cursor: pointer;
+        outline: 0;
+        font-size: 14px;
+    }
+</style>
+<script>
+    export default {
+        name: 'layout'
+    }
+</script>

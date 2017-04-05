@@ -8,7 +8,8 @@
 [知乎React Demo](https://jf3096.github.io/zhihu-particle/)
 
 ## Demo源码
-[知乎React Demo源码](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu)
+[知乎React Demo源码](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu-react)
+[知乎Vue Demo源码](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu-vue)
 
 ## 安装
 ```shell

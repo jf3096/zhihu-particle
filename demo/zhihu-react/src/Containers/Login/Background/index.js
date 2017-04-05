@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './index.less';
-import Particle from '../../../../../../index';
+import Particle from 'zhihu-particle';
 
 export default class Background extends React.Component {
     componentDidMount() {
