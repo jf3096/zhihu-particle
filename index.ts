@@ -1,2 +1,2 @@
-import Particle from './libs';
+import Particle from './libs/index';
 export default Particle;

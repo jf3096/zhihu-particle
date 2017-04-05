@@ -3,8 +3,11 @@ module.exports = {
     entry: './index.ts',
 
     output: {
-        filename: 'index.js',
-        path: './dist'
+        filename: 'zhihu-particle.min.js',
+        path: './dist',
+        library: 'particle',
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     },
 
     resolve: {
@@ -13,7 +16,7 @@ module.exports = {
 
     module: {
         loaders: [
-            {test: /.ts$/, loader: 'ts-loader'}
+            {test: /.ts$/, loader: 'awesome-typescript-loader'}
         ]
     }
 };
