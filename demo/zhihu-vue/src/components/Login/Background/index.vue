@@ -17,7 +17,7 @@
     export default {
         name: 'layout',
         mounted(){
-            new Particle(this.$el, {interactive: true})
+            new Particle(this.$el, {interactive: true, density: 'low'})
         }
     }
 </script>

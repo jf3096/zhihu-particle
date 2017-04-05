@@ -4,7 +4,7 @@ import Particle from 'zhihu-particle';
 
 export default class Background extends React.Component {
     componentDidMount() {
-        new Particle(this.background, {interactive: true});
+        new Particle(this.background, {interactive: true, density: 'low'});
     }
 
     render() {

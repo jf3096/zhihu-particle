@@ -1,20 +1,22 @@
 {
-  "name": "minimal-react-starter",
+  "name": "zhihu-react",
   "version": "0.0.4",
-  "description": "Minimal react starter project",
+  "description": "A zhihu-react particle react project",
   "main": "src/index.js",
   "scripts": {
-    "compile": "webpack",
+    "compile": "webpack -p",
     "start": "node server.js"
   },
   "keywords": [
     "react",
-    "webpack",
-    "babel",
-    "minimal",
-    "starter"
+    "particle",
+    "canvas",
+    "zhihu",
+    "知乎",
+    "atom animation",
+    "particle animation"
   ],
-  "author": "Andrew H Farmer",
+  "author": "Ailun She",
   "license": "MIT",
   "repository": {
     "type": "git",

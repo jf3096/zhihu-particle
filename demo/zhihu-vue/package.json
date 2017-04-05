@@ -1,9 +1,17 @@
 {
   "name": "zhihu-vue",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "A zhihu particle Vue.js project",
   "author": "sheailun <529360897@qq.com>",
-  "private": true,
+  "keywords": [
+    "vue",
+    "particle",
+    "canvas",
+    "zhihu",
+    "知乎",
+    "atom animation",
+    "particle animation"
+  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js"
