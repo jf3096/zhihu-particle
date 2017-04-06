@@ -1,7 +1,7 @@
 {
-  "name": "zhihu-react",
+  "name": "zhihu-inferno",
   "version": "0.0.4",
-  "description": "A zhihu particle react project",
+  "description": "A zhihu particle inferno project",
   "main": "src/index.js",
   "scripts": {
     "compile": "webpack -p",
@@ -28,8 +28,8 @@
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.22.0",
     "express": "^4.14.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "inferno": "^1.6.2",
+    "inferno-compat": "^1.6.2",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
     "zhihu-particle": "^0.0.6"

@@ -1,8 +1,8 @@
-const ghpages = require('gh-pages');
+const ghPages = require('gh-pages');
 const path = require('path');
 
-const targetDirectory = path.join(__dirname, '../demo/zhihu/www');
-ghpages.publish(targetDirectory, (err) => {
+const targetDirectory = path.join(__dirname, '../demo/zhihu-inferno/www');
+ghPages.publish(targetDirectory, (err) => {
     if (err) {
         throw err;
     }

@@ -1,7 +1,7 @@
 {
   "name": "zhihu-vue",
   "version": "1.0.0",
-  "description": "A zhihu particle Vue.js project",
+  "description": "A zhihu particle Vue project",
   "author": "sheailun <529360897@qq.com>",
   "keywords": [
     "vue",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "vue": "^2.2.2",
-    "zhihu-particle": "0.0.6"
+    "zhihu-particle": "^0.0.6"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

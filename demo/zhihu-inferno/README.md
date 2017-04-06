@@ -1,4 +1,4 @@
-# Zhihu-Particle (Vue Demo)
+# Zhihu-Particle (React Demo)
 [![NPM](https://nodei.co/npm/zhihu-particle.png)](https://www.npmjs.com/package/zhihu-particle)
 
 ## 安装
@@ -9,21 +9,14 @@
 ```
 
 ```shell
-    cd zhihu-particle/demo/zhihu-vue
+    cd zhihu-particle/demo/zhihu-react
     yarn # 或者自行选择 npm install
     npm start
 ```
 
-### 开发环境执行以下代码并打开 [http://localhost:8080/](http://localhost:8080/)
-npm run dev
+最后打开[http://localhost:3000/](http://localhost:3000/)即可。
 
-### 部署与压缩模式
-npm run build
-
-### 部署与压缩模式，并生成分析报告
-npm run build --report
-
-**注意：当前demo项目核心在demo/zhihu-vue/src/components/Login/Background/index.vue，该JS使用了Zhihu-Particle的库**
+**注意：当前demo项目核心在src\Containers\Login\Background\index.js，该JS使用了Zhihu-Particle的库**
 
 ## 效果图
 ![zhihu-particle](../../git-img/zhihu-particle.gif)
