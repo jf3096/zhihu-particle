@@ -9,7 +9,7 @@
 
 ## Demo源码
 [知乎React Demo源码](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu-react) <br />
-[知乎Vue Demo源码](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu-vue)
+[知乎Vue Demo源码](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu-vue) <br />
 [知乎Inferno Demo源码 - For Fun Only](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu-inferno)
 
 ## 安装
