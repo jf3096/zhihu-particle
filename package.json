@@ -1,6 +1,6 @@
 {
   "name": "zhihu-particle",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "A canvas particle animation effect dirived from ZHIHU website",
   "main": "index.js",
   "author": "Ailun She",

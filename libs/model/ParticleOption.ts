@@ -7,10 +7,10 @@ type DensityStringType = 'high' | 'low' | 'medium';
 type DensityType = DensityStringType | number;
 
 export default class ParticleOption {
-    public atomColor: string;
-    public interactive: boolean;
-    public velocity: VelocityType;
-    public density: DensityType;
+    public atomColor?: string;
+    public interactive?: boolean;
+    public velocity?: VelocityType;
+    public density?: DensityType;
 
     public constructor({
         atomColor,
