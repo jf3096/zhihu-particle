@@ -3,23 +3,23 @@ import {setStyles} from './utils';
 import Atom from './model/Atom';
 import debounce = require('lodash/debounce');
 
-interface IParticleProps extends ParticleOption {
+export interface IParticleProps extends ParticleOption {
 }
 
 export default class Particle {
-    private canvasWrapper: HTMLCanvasElement;
+    private canvasWrapper: HTMLElement;
     private canvas: HTMLCanvasElement;
     private option: IParticleProps;
     private atoms: Array<Atom>;
 
-    public constructor(canvasWrapper: HTMLCanvasElement, option = {} as ParticleOption) {
+    public constructor(canvasWrapper: HTMLElement, option = {} as ParticleOption) {
         this.canvasWrapper = canvasWrapper;
         this.setHtmlElementSize(this.canvasWrapper);
         this.option = new ParticleOption(option);
         this.init();
     }
 
-    private setHtmlElementSize(dom: HTMLCanvasElement) {
+    private setHtmlElementSize(dom: HTMLElement) {
         dom[`size`] = {
             width: dom.offsetWidth,
             height: dom.offsetHeight,
