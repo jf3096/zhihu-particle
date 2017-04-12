@@ -2,8 +2,8 @@
 [![NPM](https://nodei.co/npm/zhihu-particle.png)](https://www.npmjs.com/package/zhihu-particle)
 
 ## 简介
-由于群友的号召，清明时节得空，所以仿[知乎登录](https://www.zhihu.com)页面，基于canvas实现了一个粒子（Particle）随机运动的动画效果。
-
+由于群友的号召，清明时节得空，所以仿[知乎登录](https://www.zhihu.com)页面，基于canvas实现了一个粒子（Particle）随机运动的动画效果。<br />
+为了方便大家使用，也为提供了react和vue知乎登录页的完整实现。小手抖一抖，点赞有木有，喜欢的可以点个赞当做收藏吧。
 ## Demo
 [知乎Particle Demo](https://jf3096.github.io/zhihu-particle/)
 
