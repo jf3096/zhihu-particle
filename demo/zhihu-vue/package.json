@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "vue": "^2.2.2",
-    "zhihu-particle": "^0.0.6"
+    "zhihu-particle": "^0.0.*"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

@@ -32,7 +32,7 @@
     "react-dom": "^15.4.2",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
-    "zhihu-particle": "^0.0.6"
+    "zhihu-particle": "^0.0.*"
   },
   "devDependencies": {
     "css-loader": "^0.28.0",
