@@ -12,6 +12,9 @@
 [知乎Vue Demo源码](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu-vue) <br />
 [知乎Inferno Demo源码 - For Fun Only](https://github.com/jf3096/zhihu-particle/tree/master/demo/zhihu-inferno)
 
+## 独立包
+[react-particle](https://github.com/jf3096/react-particle) 
+ 
 ## 安装
 ```shell
 npm i zhihu-particle --save #使用npm安装
