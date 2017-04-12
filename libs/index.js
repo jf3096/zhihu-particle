@@ -87,7 +87,6 @@ var Particle = (function () {
         var _a = this, canvas = _a.canvas, option = _a.option;
         var context = this.getContext();
         var atomColor = option.atomColor;
-        console.log(atomColor);
         return new Atom_1.default({
             canvas: canvas, context: context, color: atomColor, velocity: velocity
         });

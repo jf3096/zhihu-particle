@@ -105,7 +105,6 @@ export default class Particle {
         const {canvas, option} = this;
         const context = this.getContext();
         const {atomColor} = option;
-        console.log(atomColor);
         return new Atom({
             canvas, context, color: atomColor, velocity
         });

@@ -1,6 +1,6 @@
 {
   "name": "zhihu-particle",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A canvas particle animation effect dirived from ZHIHU website",
   "main": "index.js",
   "author": "Ailun She",
@@ -14,9 +14,6 @@
     "particle animation"
   ],
   "dependencies": {
-    "@types/invariant": "^2.2.28",
-    "@types/lodash": "^4.14.53",
-    "@types/node": "^7.0.5",
     "invariant": "^2.2.2",
     "lodash": "^4.17.4"
   },
@@ -25,6 +22,8 @@
     "gh-pages": "node shell/index"
   },
   "devDependencies": {
+    "@types/invariant": "^2.2.28",
+    "@types/node": "^7.0.5",
     "@types/lodash": "^4.14.61",
     "awesome-typescript-loader": "^3.1.2",
     "gh-pages": "^0.12.0",
