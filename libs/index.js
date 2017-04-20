@@ -1,18 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ParticleOption_1 = require("./model/ParticleOption");
-var utils_1 = require("./utils");
-var Atom_1 = require("./model/Atom");
-var debounce = require("lodash/debounce");
-var Particle = (function () {
-    function Particle(canvasWrapper, option) {
-        if (option === void 0) { option = {}; }
-        var _this = this;
-        this.getContext = (function () {
-            var context = null;
-            return function () {
+const ParticleOption_1 = require("./model/ParticleOption");
+const utils_1 = require("./utils");
+const Atom_1 = require("./model/Atom");
+const debounce = require("lodash/debounce");
+class Particle {
+    constructor(canvasWrapper, option = {}) {
+        this.getContext = (() => {
+            let context = null;
+            return () => {
                 if (!context) {
-                    context = _this.getCanvas().getContext('2d');
+                    context = this.getCanvas().getContext('2d');
                 }
                 return context;
             };
@@ -22,18 +20,18 @@ var Particle = (function () {
         this.option = new ParticleOption_1.default(option);
         this.init();
     }
-    Particle.prototype.setHtmlElementSize = function (dom) {
-        dom["size"] = {
+    setHtmlElementSize(dom) {
+        dom[`size`] = {
             width: dom.offsetWidth,
             height: dom.offsetHeight,
         };
-    };
-    Particle.prototype.getHtmlElementSize = function (dom) {
-        return dom["size"];
-    };
-    Particle.prototype.init = function () {
-        var interactive = this.option.interactive;
-        var canvas = this.getCanvas();
+    }
+    getHtmlElementSize(dom) {
+        return dom[`size`];
+    }
+    init() {
+        const { interactive } = this.option;
+        const canvas = this.getCanvas();
         this.canvasWrapper.appendChild(canvas);
         utils_1.setStyles(canvas, { 'z-index': '10', 'position': 'relative' });
         this.resizeEventListener();
@@ -48,30 +46,29 @@ var Particle = (function () {
         /**
          * calculate atom number. it depends on density option
          */
-        var atomsNum = canvas.width * canvas.height / this.option.density;
-        for (var i = 0; i < atomsNum; i++) {
+        const atomsNum = canvas.width * canvas.height / this.option.density;
+        for (let i = 0; i < atomsNum; i++) {
             this.atoms.push(new Atom_1.default({ canvas: this.canvas, context: this.getContext(), color: this.option.atomColor, velocity: this.option.velocity }));
         }
         interactive && this.addMouseEventListener();
         requestAnimationFrame(this.update.bind(this));
-    };
-    Particle.prototype.getCanvas = function () {
+    }
+    getCanvas() {
         if (!this.canvas) {
             this.canvas = document.createElement('canvas');
         }
         return this.canvas;
-    };
-    Particle.prototype.syncCanvasDivSize2Canvas = function () {
-        var _a = this.getHtmlElementSize(this.canvasWrapper), width = _a.width, height = _a.height;
+    }
+    syncCanvasDivSize2Canvas() {
+        const { width, height } = this.getHtmlElementSize(this.canvasWrapper);
         this.canvas.width = width;
         this.canvas.height = height;
-    };
-    Particle.prototype.resizeEventListener = function () {
-        var _this = this;
-        window.addEventListener('resize', debounce(function () {
-            var _a = _this.getHtmlElementSize(_this.canvasWrapper), width = _a.width, height = _a.height;
-            var canvasWrapper = _this.canvasWrapper;
-            var canvas = _this.getCanvas();
+    }
+    resizeEventListener() {
+        window.addEventListener('resize', debounce(() => {
+            const { width, height } = this.getHtmlElementSize(this.canvasWrapper);
+            const { canvasWrapper } = this;
+            const canvas = this.getCanvas();
             /**
              * ensure the window resize has affected the size of canvas wrapper
              */
@@ -81,21 +78,19 @@ var Particle = (function () {
             canvas.width = canvasWrapper.offsetWidth;
             canvas.height = canvasWrapper.offsetHeight;
         }, 100));
-    };
-    Particle.prototype.createMouseAtom = function (velocity) {
-        if (velocity === void 0) { velocity = 0; }
-        var _a = this, canvas = _a.canvas, option = _a.option;
-        var context = this.getContext();
-        var atomColor = option.atomColor;
+    }
+    createMouseAtom(velocity = 0) {
+        const { canvas, option } = this;
+        const context = this.getContext();
+        const { atomColor } = option;
         return new Atom_1.default({
-            canvas: canvas, context: context, color: atomColor, velocity: velocity
+            canvas, context, color: atomColor, velocity
         });
-    };
-    Particle.prototype.addMouseEventListener = function () {
-        var _this = this;
-        var _a = this, atoms = _a.atoms, option = _a.option;
-        var canvas = this.getCanvas();
-        var mouseAtom = this.createMouseAtom();
+    }
+    addMouseEventListener() {
+        const { atoms, option } = this;
+        const canvas = this.getCanvas();
+        let mouseAtom = this.createMouseAtom();
         atoms.push(mouseAtom);
         /**
          * whenever mouse move, as long as mouse is on canvas,
@@ -114,12 +109,12 @@ var Particle = (function () {
          * whenever mouse up, as long as mouse is on canvas,
          * the follow function will be triggered
          */
-        canvas.addEventListener('mouseup', function () {
+        canvas.addEventListener('mouseup', () => {
             /**
              * create a new atom for mouse
              * @type {Atom}
              */
-            var velocity = option.velocity;
+            const { velocity } = option;
             /**
              * update the velocity and then push it to the list
              */
@@ -127,22 +122,22 @@ var Particle = (function () {
                 x: (Math.random() - 0.5) * velocity,
                 y: (Math.random() - 0.5) * velocity
             };
-            _this.atoms.push(mouseAtom);
-            mouseAtom = _this.createMouseAtom();
-            _this.atoms.push(mouseAtom);
+            this.atoms.push(mouseAtom);
+            mouseAtom = this.createMouseAtom();
+            this.atoms.push(mouseAtom);
         });
-    };
-    Particle.prototype.update = function () {
-        var context = this.getContext();
-        var canvas = this.getCanvas();
-        var _a = this, atoms = _a.atoms, _b = _a.option, velocity = _b.velocity, atomColor = _b.atomColor;
-        var width = canvas.width, height = canvas.height;
+    }
+    update() {
+        const context = this.getContext();
+        const canvas = this.getCanvas();
+        const { atoms, option: { velocity, atomColor } } = this;
+        const { width, height } = canvas;
         context.clearRect(0, 0, width, height);
         context.globalAlpha = 1;
         /**
          * draw atoms
          */
-        atoms.forEach(function (atom, index) {
+        atoms.forEach((atom, index) => {
             atom.update();
             atom.draw();
             Particle.drawConnections(atoms, context, index, atomColor);
@@ -150,10 +145,10 @@ var Particle = (function () {
         if (velocity !== 0) {
             requestAnimationFrame(this.update.bind(this));
         }
-    };
-    Particle.drawConnections = function (atoms, context, index, atomColor) {
-        for (var j = atoms.length - 1; j > index; j--) {
-            var distance = Math.sqrt(Math.pow(atoms[index].x - atoms[j].x, 2)
+    }
+    static drawConnections(atoms, context, index, atomColor) {
+        for (let j = atoms.length - 1; j > index; j--) {
+            const distance = Math.sqrt(Math.pow(atoms[index].x - atoms[j].x, 2)
                 + Math.pow(atoms[index].y - atoms[j].y, 2));
             if (distance > 200) {
                 continue;
@@ -166,7 +161,6 @@ var Particle = (function () {
             context.lineTo(atoms[j].x, atoms[j].y);
             context.stroke();
         }
-    };
-    return Particle;
-}());
+    }
+}
 exports.default = Particle;
